@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+#include <iomanip>
+#include <string>
+
+int main() {
+  string vendedor;
+  double salario, vendas;
+  cin >> vendedor >> salario >> vendas;
+  cout << "TOTAL = R$ " << fixed << setprecision(2) << salario + vendas * 0.15 << endl;
+}
