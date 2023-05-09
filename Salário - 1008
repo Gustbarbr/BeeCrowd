@@ -1,0 +1,13 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+ 
+int main() {
+ 
+    int numero, horas;
+    double valor;
+    cin >> numero >> horas >> valor;
+    cout << "NUMBER = " << numero << endl << fixed << setprecision(2) << "SALARY = U$ " << horas * valor << endl;
+    
+    return 0;
+}
