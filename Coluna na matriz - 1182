@@ -1,0 +1,32 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main(){
+
+  double M[12][12], num, soma = 0;
+  char c;
+  int ln;
+
+  cin >> ln;
+  cin >> c;
+
+  for(int i = 0; i < 12; i++){
+    for(int j = 0; j < 12; j++){
+      cin >> num;
+      M[i][j] = num;
+    }
+  }
+  if(c == 'S'){
+    for(int i = 0; i < 12; i++){
+      soma += M[i][ln];
+    }
+    printf("%.1lf\n", soma);
+  }
+  else{
+    for(int i = 0; i < 12; i++){
+      soma += M[i][ln];
+    }
+    printf("%.1lf\n", soma/12);
+  }
+}
