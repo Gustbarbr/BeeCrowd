@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+#include <algorithm>
+#include <cstdlib>
+#include <fstream>
+#include <iomanip>
+#include <math.h>
+#include <memory>
+#include <set>
+#include <stdlib.h>
+#include <string>
+#include <vector>
+
+/* --------------------------------------- 1961 ----------------------------------------*/
+
+int main(){
+
+  int alturap, ncanos, alturac, a = 0, b = 0, cont = 0, YW = 0, GO = 0;
+
+  cin >> alturap >> ncanos;
+
+  while(cont < (ncanos/2)){
+    cin >> a >> b;
+
+    if(a < b){
+      if(b - a > alturap){
+        GO++;
+      }
+      if(b - a <= alturap){
+        YW++;
+      }
+    }
+
+    else if(a > b){
+      if(a - b > alturap){
+        GO++;
+      }
+      if(a - b >= 0){
+        YW++;
+      }
+    } 
+    cont++;
+  }
+  
+  if(GO > 0){
+    cout << "GAME OVER" << endl;
+  }
+  else{
+    cout << "YOU WIN" << endl;
+  }
+  
+}
