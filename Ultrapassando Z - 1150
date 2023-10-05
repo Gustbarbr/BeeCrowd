@@ -1,0 +1,22 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main(){
+
+  int X, Z, soma = 0, cont = 0;
+
+  cin >> X >> Z;
+
+  while(X >= Z){
+    cin >> Z;
+  }
+
+  while(soma < Z){
+    soma = soma + (X + cont);
+    cont++;
+  }
+
+  cout << cont << endl;
+  
+}
