@@ -1,0 +1,48 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main(){
+
+  int inter = 0, gremio = 0, ptsInter = 0, ptsGremio = 0, empate = 0, grenal =
+0, novo = 1;
+
+  while(novo == 1){
+
+    cin >> inter >> gremio;
+
+    if(inter > gremio){
+      ptsInter++;
+      grenal++;
+    }
+    else{
+      ptsGremio++;
+      grenal++;
+    }
+
+    cout << "Novo grenal (1-sim 2-nao)" << endl;
+    cin >> novo;
+
+    if(novo == 2){
+      
+      if(ptsInter == ptsGremio){
+        empate++;
+      }
+      
+      if(ptsInter > ptsGremio){
+        cout << grenal << " grenais" << endl << "Inter:" << ptsInter << endl <<
+"Gremio:" << ptsGremio << endl << "Empates:" << empate << endl << "Inter venceu mais" << endl;
+      }
+      else if(ptsGremio > ptsInter){
+        cout << grenal << " grenais" << endl << "Inter:" << ptsInter << endl <<
+"Gremio:" << ptsGremio << endl << "Empates:" << empate << endl << "Gremio venceu mais" << endl;
+      }
+      else{
+        cout << grenal << " grenais" << endl << "Inter:" << ptsInter << endl <<
+"Gremio:" << ptsGremio << endl << "Empates:" << empate << endl << "Empate" <<
+endl;
+      }
+    }
+  }
+
+}
